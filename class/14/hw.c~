@@ -1,0 +1,19 @@
+
+int main(){
+pid_t cpid;
+cpid = fork();
+if(cpid == 0){
+setpgid(0,0);
+if( getpid() == getpgid()){
+printf("C: SAME PGID");
+}
+_exit(0);
+}else if(cpid > 0){
+if(getpgid(cpid) == cpid){
+printf("P: SAME PGID");
+}
+wait();
+_exit(0);
+}
+_exit(1); //fork failed_
+}

@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h> //for strlen() only!
+
+void mystrcpy(char * from, char * to){
+  //TODO: Complete the function
+  int temp = *to;
+    *to = *from;
+    *from = *to;
+}
+
+void reverse(char * str){
+  //TODO: Complete the function
+  int a[str];
+  int ii;
+  for(ii =0; ii < (strlen(str)+1)/2; ii++)  {
+    mystrcop(a[ii],a[strlen(str)+1-ii]); 
+  }
+
+}
+
+int main(int argc, char * argv[]){
+
+  char hello[] = "Hello World!";
+  char hello_cp[100]; //declared another string of size 100
+
+  mystrcpy(hello, hello_cp);
+  
+  printf("%s\n", hello_cp);
+  
+  printf("-----------\n");
+  
+  reverse(hello);
+  printf("%s\n",hello_cp); //still prints "Hello World!"
+  printf("%s\n", hello); //should print "!dlroW olleH"
+
+}

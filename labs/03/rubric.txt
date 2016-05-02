@@ -1,0 +1,227 @@
+----------------------------------------------------------------------------
+Name:  XXXXXX
+Alpha: XXXXXX
+
+Grade:  XX/100
+
+This lab is graded out of 100 points, but there are 110 points
+available. You can receive a grade of 110 points on this lab only by
+completing the lab fully, but you can still receive a 100 by doing
+some of each the tasks. 
+
+----------------------------------------------------------------------------
+
+Overall Deductions:
+
+  -10 Code Doesn't compile
+  -3  Code compiles with warnings
+  -10 Bad coding style and whitespace management
+  -5  Poor and ineffective comment
+  -5  Did not fill out README
+
+
+
+Task 1: C Functions : 10 points
+
+     (5/3/1/0) Swap
+     
+     +5 swap
+      - Proper swap with pointer dereferences
+
+     +3 swap
+       - proper swap without pointer deferences
+       
+     +1 swap
+       - SEGFAULT!
+
+     (5/2/1/0) Swap Pair
+   
+     +5 swap pair
+       - proper swap with of pair
+       
+     +3 swap pair
+       - proper swap with bade pointer management
+       
+     +1 swap pair
+       - SEGFAULT
+
+
+
+Task 2: C Strings : 20 points
+
+     (10/7/3/0) mystrcp
+     
+      +10 mystr
+       - Copies from string to to string
+       - Preserves NULL termination
+
+      +7 mystr
+       - Copies from string to to string
+       - Does not preserve NULL termination
+       
+      +3 mystr
+       - SEGFAULT!
+     
+     (10/8/5/3/0) reverse
+     
+      +10 reverses
+       - reverses string properly
+       - does not affect NULL termination
+       - does not create additional memory allocations
+
+      +8 reverses
+       - reverses string properly
+       - does not create additional memory allocations
+
+      +8 reverses
+       - reverses string properly
+       - does not affect NULL termination
+
+      +3 reserve
+       - SEGFAULT
+
+     
+     
+
+     (EC: 5) mystrcp and reverse written with pointer arithmetic
+
+Task 3: save/recall : 30 points
+
+     (15/13/10/5/3/0) save
+     
+     +15 save
+       - checks and reports error to stderr
+       - Reads data from stdin
+       - Writes data to save.out
+
+     +13 save
+       - checks and reports error to *stdout* instead of stderr
+       - reads data to stdin
+       - Writes data to save.out
+
+     +10 save
+       - reads data from stdin
+       - Writes data to save.out
+     
+
+     (15/10/5/3/0) recall
+
+     +15 recall
+       - checks and reports error to stderr
+       - Reads data from save.out
+       - Writes data to stdout
+
+     +13 recall
+       - checks and reports error to *stdout* instead of stderr
+       - reads data to save.out
+       - Writes data to stdout
+
+     +10 recall
+       - reads data from save.out
+       - Writes data to stdout
+
+     
+
+Task 4: mycp mycat : 35 points
+
+     (15/12/10/7/5/2/0) mycp
+
+     +15 mywc
+        - Reports error for invalid number of arguments to stderr
+        - Reports error for cannot read from from_file to stderr
+	- Reports errro for cannot write to to_file to stderr
+	- Performs copy faithfully
+	
+     +12 mywc
+        - Reports error for invalid number of arguments 
+        - Reports error for cannot read from from_file 
+	- Reports errro for cannot write to to_file 
+	- Performs copy faithfully
+
+     +10 mywc
+        - Reports error for cannot read from from_file 
+	- Reports errro for cannot write to to_file 
+	- Performs copy faithfully
+
+     +7 mycp
+        - Performs copy faithfully
+
+
+     (20/18/15/13/10/5/2/0) mycat
+     
+     +20 mycat
+        - Reports error for invalid files to stderr
+        - Can handle "-" argument for reading for stdin
+        - Handle multiple file inputs from the command line
+        - Reads from stdin when no file is provided 
+
+     +18 mycat
+        - Reports error for invalid files to *stdout* rather than stdin
+        - Can handle "-" argument for reading for stdin
+        - Handle multiple file inputs from the command line
+        - Reads from stdin when no file is provided 
+
+     +15 mycat	
+        - Can handle "-" argument for reading for stdin
+        - Handle multiple file inputs from the command line
+        - Reads from stdin when no file is provided 
+
+     +13 mycat	
+        - Handle multiple file inputs from the command line
+        - Reads from stdin when no file is provided 
+
+     +10 mycat
+        - Handle multiple file inputs from the command line
+
+     +10 mycat
+        - Reads from stdin when no file is provided 
+
+
+Task 5: mywc : 25 Points
+
+     (25/22/20/18/15/10/5/0) mywc
+    
+
+     +25 mywc can report an accurate line-, word-, and byte-count for
+         - Multiple command line arguments
+         - Read stdin without command line arguments
+         - Read stdin with "-" with other comamnds
+         - Report a total count for multiple files
+         - can handle the -l, -w, -c option report
+	 - Reports all errors to stderr
+
+     +22 mywc can report an accurate line-, word-, and byte-count for
+         - Multiple command line arguments
+         - Read stdin without command line arguments
+         - Read stdin with "-" with other comamnds
+         - Report a total count for multiple files
+         - can handle the -l, -w, -c option report
+
+     +20 mywc can report an accurate line-, word-, and byte-count for
+         - Read at least one file from command line arguments
+         - Read stdin when no command line arguments are provided
+         - Read stdin with "-" when commmand line option
+         - can handle the -l, -w, -c option report
+
+
+     +20 mywc can report an accurate line-, word-, and byte-count for
+         - Read at least one file from command line arguments
+         - Read stdin when no command line arguments are provided
+         - can handle the -l, -w, -c option report
+
+     +15 mywc can report an accurate line-, word-, and byte-count for
+         - Read stdin when no command line arguments are provided
+         - can handle the -l, -w, -c option report
+
+     +15 mywc can report an accurate line-, word-, and byte-count for
+         - Read at least one file from command line arguments
+         - can handle the -l, -w, -c option report
+
+     +10 mywc can report an accurate line-, word-, and byte-count for
+         - Read stdin when no command line arguments are provided
+         - reports all counts but does not handle -l, -w, or -c options
+
+     +10 mywc can report an accurate line-, word-, and byte-count for
+         - Read stdin when no command line arguments are provided
+         - reports all counts but does not handle -l, -w, or -c options
+	 

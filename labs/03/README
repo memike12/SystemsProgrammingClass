@@ -1,0 +1,40 @@
+----------------------------------------------------------------------------
+Name:  Michael Moore
+Alpha: 164488
+
+----------------------------------------------------------------------------
+Instructions:
+
+  Replace the X's above with your name and alpha, and your partners
+  Below, fill out this worksheet with the appropriate answers
+  following the questions.
+
+  Feel free to add extra whitespace as needed, but please leave the
+  general questions and worksheets intact. 
+
+  This worksheet will be submitted electronically with your
+  submission. Instructions for submission are found on the lab page.
+
+----------------------------------------------------------------------------
+
+For each of the tasks, describe your programs functionality and
+design. Also include any issue you had, and any other information
+you'd like to share with the instructor.
+
+Task 1:    My program swaps the two values and the two pointers. I ran
+     into a lot of trouble figuring out exactly what I need to
+     dereference and what I didn't.
+
+Task 2:    My program copies a string then reverses it. I wanted to
+     use my mystrcpy inside the reverse for some reason and that
+     screwed me up for awhile.
+
+Task 3: 
+     I saved the file then output it with recall. 
+
+Task 4: 
+     mycp copies two files. mycat was much harder and still dosn't
+     function properly with the - < operand
+
+Task 5:
+

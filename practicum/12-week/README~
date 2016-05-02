@@ -1,0 +1,25 @@
+----------------------------------------------------------------------------
+Name:  Michael Moore
+Alpha: 164488
+
+----------------------------------------------------------------------------
+
+Fill out the below worksheet answer any relevant questions and adding
+descriptions where neccesary. (Don't forget to write your name and
+alpha at the top)
+
+----------------------------------------------------------------------------
+
+Prob 1:
+     I couldn't get the make file to work becasue there is no cugh
+     file or directory for rpn. I have no idea why it is saying that. 
+
+Prob 2:
+     I couldn't get the piping to actually pipe through. I drew out
+     what I wanted and implomented it but the middle child broken in
+     half confuses me and I'm pretty sure that is where my error is. 
+
+Prob 3:
+     I can't figure out how to actually recieve the signal, or if I
+     am, I don't really know what to do with it. The signal gets used
+     on pong and it clearly shouldn't.

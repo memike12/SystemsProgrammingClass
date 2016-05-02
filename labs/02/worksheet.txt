@@ -1,0 +1,55 @@
+----------------------------------------------------------------------------
+Name:  Michael Moore
+Alpha: 164488
+
+----------------------------------------------------------------------------
+Instructions:
+
+  Replace the X's above with your name and alpha, and your partners
+  Below, fill out this worksheet with the appropriate answers
+  following the questions.
+
+  Feel free to add extra whitespace as needed, but please leave the
+  general questions and worksheets intact. 
+
+  This worksheet will be submitted electronically with your
+  submission. Instructions for submission are found on the lab page.
+
+----------------------------------------------------------------------------
+
+For each of the tasks, describ your script logic, any issue you had,
+and any other information you'd like to share with the isntructor.
+
+Task 1:
+     I cut the file at the first : in the etc/passwd file
+
+Task 2:
+     I took in the arguement and grep'd for that username. I then
+     printed out the acutal name by cutting to the aproprate field.
+
+Task 3: 
+     I did an if statement checking if there was an argument, then if
+     the file existed. if it didn't or there was no argument then an
+     error was printed out to stderr. if it was a good file it ls -l'd
+     the file and cut out the size then printed it out.
+
+Task 4: 
+     I started with my if statement to test if there was an arguement
+     which resulted in an error if there wasnt. Then I made a for loop
+     for all the arguements and printed out an error if the filename
+     didn't exist. If it did exist then I had it print out the
+     filename then size.
+
+Task 5: 
+     I checked if the required arguments were there, printed out an
+     error if they weren't. I took the size from the arguments and
+     saved it. I found the size of the file in question and saved
+     it. Then I did a comparison to see which one was bigger and
+     printed out the response according to that.
+
+Task 6: 
+     I figured out which exit codes go with which errors then I made a
+     loop to find the args that were entered and check if the files
+     were bigger than the number entered. This called isbiggerthan.sh
+     to do it and isbiggerthanall.sh used its error code to determine
+     if it was a good run.

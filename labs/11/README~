@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------
+Name:  Michael Moore
+Alpha: 164488
+
+----------------------------------------------------------------------------
+
+Fill out the below worksheet answer any relevant questions and adding
+descriptions where neccesary. (Don't forget to write your name and
+alpha at the top)
+
+----------------------------------------------------------------------------
+
+
+Task 1: myhost
+I zeroed the hints and then said that I only want IPv4.
+Then I did getaddrinfo for the argument provided. 
+I then iritated through the linked list and printed ever IP address 
+which matched the protocol TCP. 
+
+Task 2: mywget
+

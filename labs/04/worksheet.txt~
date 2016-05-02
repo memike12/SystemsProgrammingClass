@@ -1,0 +1,57 @@
+----------------------------------------------------------------------------
+Name:  Michael Moore    
+Alpha: 164488
+
+----------------------------------------------------------------------------
+
+Fill out the below worksheet answer any relevant questions and adding
+descriptions where neccesary. (Don't forget to write your name and
+alpha at the top)
+
+----------------------------------------------------------------------------
+Task 1: Memory Leaks
+
+    
+    1. Run valgrind on the memleak program, how many bytes does it
+       say have been definitely lost?
+       60 bytes.
+    2. What line does valgrind indicate the memory leak has occurred?
+       33, 19, 49
+    3. Describe the memory leak.
+       The program memory leaks from calloc
+    4. Try and fix the memory leak and verify your fix with
+       valgrind. Describe how you fixed the memory leak.
+       I freed a before it was reassigned by the function and then
+       freed it again after
+
+Task 2: Memory Violations
+
+  1. Describe the output and exeuction of the program. Does it seem to be consistent?
+     It outputs Hello World! The program makes an array and then
+     copies it and outputs the copy. 
+  2. Run the program under valgrind, identify the line of code that is
+     causing the memory violation and its input.
+     Copying hello to str is causing the memory violation.
+  3. Debug the memory violation and describe the programming bug.
+     I found that the NULL turminator wasn't copied when the program
+     was copied.
+  4. Fix the memory violation and verify your fix with valgrind.
+     I added one to the size and then made sure it copied
+     the terminator.
+
+Task 3: Segfaults
+
+  1. Reviewing the program =segfault.c=. Describe the expected output.
+     It saves in three pairs, prints them, delets one, prints them,
+     then deletes all the pairs.
+  2. Compile and execute the program (don't forget the -g compilation
+     flag). Use gdb to identify the segfault.
+     the seg fault happens at line 52 during the pringf.
+  3. Fix the segfault, and continue to the debug the program until
+     the desired output is reached:
+     I put an if statement in to make sure that the data wasn't null
+     effectivly fixing the seg fault
+
+Task 4: simplefs
+
+    (PLACE ANY COMMENTS ABOUT YOUR CODE HERE)

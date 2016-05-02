@@ -1,0 +1,71 @@
+----------------------------------------------------------------------------
+Name:  Michael Moore
+Alpha: 164488
+
+----------------------------------------------------------------------------
+
+Fill out the below worksheet answer any relevant questions and adding
+descriptions where neccesary. (Don't forget to write your name and
+alpha at the top)
+
+----------------------------------------------------------------------------
+
+
+Task 1: littleman
+
+ A. Describe what happened when the fork bomb reached its conclusion?
+ What system resources ran out?
+ The fork bomb eventually made too many programs and then stopped
+ making any more. The system memory was completly used.
+
+ B. What must you do to reset your computer? 
+ To clear the system memory
+
+Task 2: bigboy
+
+  A. Fill out the following information in the table below. The first
+   two rows(n=0 and n=4) have been done for you as examples:
+
+  Column A: Number of generations to pass to forkbomb (e.g. formbomb2 4)
+  Column B: Number of forkbomb2 processes running (use ps -C forkbomb2)
+  Column C: Total number of processes as reported by 'top'
+  Column D: CPU usage as reported by 'top'
+  Column E: Free Memory as reported by 'top'
+
+A        B        C        D            E
+-------------------------------------------------------
+0       1        229   1.2%          6312024k
+4       16       245   99.8%         6308292k
+5       32       261   100.0%        6304772k
+10      1024     1252  100.0%        6206368k
+13      8192     8421  99.7%         5542136k
+14      9771     10000 100.0%           
+15      
+16
+
+ B. What was the lowest value of n in the table above that failed to
+ start the expected number of bigboy processes?
+ 14
+
+ C. How many bigboy processes should have been created for the row in
+ 1b? How many were actually created? How does this related to the
+ ulimit?
+ 16384
+
+Task 3: myps
+
+  I constructed the string for the path with the argument provided to
+  the program. I then opened the file and exited with an error if that
+  process didn't exist. I then scanned in the information and closed
+  the file. Finally printed out the information that was given to me. 
+
+Task 4: mypstree
+
+  (place a brief description of your program and any comments here)
+
+
+Task 5: fg-shell
+
+  (place a brief description of your program and any comments here)
+
+ 

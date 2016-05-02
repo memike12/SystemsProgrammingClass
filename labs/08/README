@@ -1,0 +1,38 @@
+----------------------------------------------------------------------------
+Name:  Michael Moore
+Alpha: 164488
+
+----------------------------------------------------------------------------
+
+Fill out the below worksheet answer any relevant questions and adding
+descriptions where neccesary. (Don't forget to write your name and
+alpha at the top)
+
+----------------------------------------------------------------------------
+
+
+Task 1: unroll
+     
+     unroll made all the children execute in parallel.
+
+Task 2: pipe-dup
+
+     if you are in the child you want to test to see which part of the
+     command line you are in. There are three options which are either
+     the beginning, the middle, or the end which will be signified by
+     a NULL following the argument. This same system is used for
+     identifying the parts of the arguments in the parent as well. In
+     the beginning of the argument in the child you want to close the
+     read end of the pipe then close standard out then duplicate the
+     pipe to standard out. if its the middle argument you close the
+     output of the last pipe, close the stdout then duplicate the
+     lastpipe to stdin. you close the current pipe input then
+     duplicate the current pipe to stdout. The last test for the child
+     is the last command line argument and you close the last pipe
+     output, slose stdin then duplicate the input of last pipe to
+     stdin. finally you exec the pipeline and then exit. 
+     
+     In the parent for the first argument you set the last pipe to be
+     the same as the current pipe. the second argument closes the last
+     pipe output and then copies the current pipe into the last
+     pipe. otherwise at the end you close the output of the last pipe.

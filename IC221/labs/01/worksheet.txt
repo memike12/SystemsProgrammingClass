@@ -1,0 +1,240 @@
+----------------------------------------------------------------------------
+Name:  Michael Moore
+Alpha: 164488
+
+Partner: XXXXXXXXX (part 4)
+----------------------------------------------------------------------------
+Instructions:
+
+  Replace the X's above with your name and alpha, and your partners
+  name for part 4. Below, fill out this worksheet with the appropriate
+  answers following the questions.
+
+  Feel free to add extra whitespace as needed, but please leave the
+  general questions and worksheets intact. 
+
+  
+  This worksheet will be submitted electronically with your
+  submission. Instructions for submission are found on the lab page.
+
+----------------------------------------------------------------------------
+Part 1: The Man Pages
+
+
+   1. For the =ls= command, what option prints information out in long
+      form, like =-l=, but does not print any file ownership
+      information? In the worksheet, provide a copy of the output
+      using =ls= with this option run from the *top level* of the lab
+      directory.
+
+      m164488@mich302csd04u:~/ic221/labs/01$ ls -g
+      total 36
+      drwx--x--x 2 mids 4096 Jan 10 13:31 part1
+      drwx--x--x 2 mids 4096 Jan 10 13:31 part2
+      drwx--x--x 2 mids 4096 Jan 10 13:31 part3
+      drwx--x--x 2 mids 4096 Jan 10 13:31 part4
+      drwx--x--x 2 mids 4096 Jan 10 13:31 part5
+      -rw------- 1 mids 6096 Jan 10 13:47 #worksheet.txt#
+      -rw-r--r-- 1 mids 6089 Jan 10 13:31 worksheet.txt
+
+
+   2. Change into the =part1= directory and type =ls=. You will see a
+      list of files =a b c d e f g=. 
+      
+      a. Note that =ls= lists the files in alphabetic order. What =ls=
+         option will list the files in /reverse/ alphabetic order? Provide
+         a copy of your output of your =ls= with the addition of =-l=
+         in your worksheet.
+	 
+	 m164488@mich302csd04u:~/ic221/labs/01/part1$ ls -l -r
+	 total 108
+	 -rw-r--r-- 1 m164488 mids  9894 Jan 10 13:31 g
+	 -rw-r--r-- 1 m164488 mids 13946 Jan 10 13:31 f
+	 -rw-r--r-- 1 m164488 mids 16989 Jan 10 13:31 e
+	 -rw-r--r-- 1 m164488 mids 22156 Jan 10 13:31 d
+	 -rw-r--r-- 1 m164488 mids 12214 Jan 10 13:31 c
+	 -rw-r--r-- 1 m164488 mids 12322 Jan 10 13:31 b
+	 -rw-r--r-- 1 m164488 mids  6091 Jan 10 13:31 a
+
+      b. What =ls= options will sort the files by /size/ from smallest
+         to largest? Provide a copy of your output of your =ls= with
+         the addition of =-l= in your worksheet.
+	 
+	 m164488@mich302csd04u:~/ic221/labs/01/part1$ ls -S  -l
+	 total 108
+	 -rw-r--r-- 1 m164488 mids 22156 Jan 10 13:31 d
+	 -rw-r--r-- 1 m164488 mids 16989 Jan 10 13:31 e
+	 -rw-r--r-- 1 m164488 mids 13946 Jan 10 13:31 f
+	 -rw-r--r-- 1 m164488 mids 12322 Jan 10 13:31 b
+	 -rw-r--r-- 1 m164488 mids 12214 Jan 10 13:31 c
+	 -rw-r--r-- 1 m164488 mids  9894 Jan 10 13:31 g
+	 -rw-r--r-- 1 m164488 mids  6091 Jan 10 13:31 a
+
+
+      c. What =ls= option will sort the files in /reverse size/ order
+         from largest to smallest. Provide a copy of your output of
+         your =ls= with the addition of =-l= in your worksheet.
+
+ 	 m164488@mich302csd04u:~/ic221/labs/01/part1$ ls -S -r -l
+	 total 108
+	 -rw-r--r-- 1 m164488 mids  6091 Jan 10 13:31 a
+	 -rw-r--r-- 1 m164488 mids  9894 Jan 10 13:31 g
+	 -rw-r--r-- 1 m164488 mids 12214 Jan 10 13:31 c
+	 -rw-r--r-- 1 m164488 mids 12322 Jan 10 13:31 b
+	 -rw-r--r-- 1 m164488 mids 13946 Jan 10 13:31 f
+	 -rw-r--r-- 1 m164488 mids 16989 Jan 10 13:31 e
+	 -rw-r--r-- 1 m164488 mids 22156 Jan 10 13:31 d
+
+   3. Remove the =g= file using the =rm= command. Notice that the
+      shell asked you to confirm removing the item.  Look at the
+      manual for =rm=, what option must have been invoked when you
+      issued that command? What option can you use to avoid having to
+      confirm the removal of an item?
+      
+      -i must have been invoked.
+      -f makes it never prompt.
+
+   4. (*Challenge*) Read the manual page for the =touch= command. One
+      of the uses for =touch= is to update the last modified timestamp
+      of a file (you can view that last modified using =ls -l=). Use
+      the =touch= command to create a file =y2k= whose last
+      modification time was Dec. 31 1999 at 23:59.59. Include the
+      command you used on your worksheet and a copy of your =ls -l=
+      output of the =y2k= file.
+
+      m164488@mich302csd04u:~/ic221/labs/01/part1$ touch -t 199912312359.59 y2k
+      m164488@mich302csd04u:~/ic221/labs/01/part1$ ls -l --full-time
+      total 96
+      -rw-r--r-- 1 m164488 mids  6091 2014-01-10 13:31:42.358390247 -0500 a
+      -rw-r--r-- 1 m164488 mids 12322 2014-01-10 13:31:42.418392525 -0500 b
+      -rw-r--r-- 1 m164488 mids 12214 2014-01-10 13:31:42.318388730 -0500 c
+      -rw-r--r-- 1 m164488 mids 22156 2014-01-10 13:31:42.338389488 -0500 d
+      -rw-r--r-- 1 m164488 mids 16989 2014-01-10 13:31:42.346389791 -0500 e
+      -rw-r--r-- 1 m164488 mids 13946 2014-01-10 13:31:42.374390853 -0500 f
+      -rw------- 1 m164488 mids     0 2014-01-10 14:17:24.187087779 -0500 man
+      -rw------- 1 m164488 mids     0 1999-12-31 23:59:59.000000000 -0500 y2k
+
+
+----------------------------------------------------------------------------
+Part 2: cat, less, and more
+
+
+   1. Use =cat= to place a "Beat Army!" at the start of Hemmingway's a
+      very short story and "Go Navy!" at the end. Include the command
+      you used on your worksheet.
+
+      m164488@mich302csd04u:~/ic221/labs/01/part2$ cat GoNavy.txt hemmingway.txt BeatArmy.txt 
+
+   2. Why is =less= =more=?
+   
+   Backward file movement as well as forward. Also, less does not have to read the  entire  input  file  before
+       starting, so with large input files it starts up faster than text editors like vi (1).  Less
+       uses termcap (or terminfo on some systems), so it can run on a variety of terminals.   There
+       is even limited support for hardcopy terminals. 
+
+   3. Use =less= to open =dickens.txt=:
+
+      a. Search for the first instance of "Fagin", what is the line of
+         that text?
+
+	 line 2629
+
+      b. Find the *second to last* instance of "Fagin". Describe how
+         you did that and the sentence it appears in.
+   
+	I went to the end of the file with > then typed ?Fagin twice.
+	Mr. Noah Claypole:  receiving a free pardon from the Crown in
+	consequence of being admitted approver against Fagin:  and considering
+	his profession not altogether as safe a one as he could wish:  was, for
+	some little time, at a loss for the means of a livelihood, not burdened
+	with too much work.
+
+      c. Go to line 1845, what is the name of that chapter? 
+      CHAPTER VI
+
+      OLIVER, BEING GOADED BY THE TAUNTS OF NOAH, ROUSES INTO ACTION, AND
+      RATHER ASTONISHES HIM
+
+
+----------------------------------------------------------------------------
+Part 3: Viewing Files Conditionally
+
+
+   1. Read the man pages for =head= and =less=, produce a command line
+      to print the first kilobyte of the database file. Note, a
+      kilobyte is 2^10 or 1024 bytes. Include the command line in your worksheet.
+
+   2. Use =less= or =grep= to find the line number of
+      "Klonowski". Produce a =sed= command to just print the line with
+      "Klonowski" and the following 5 lines. Include the command line
+      in your worksheet.
+
+   3. How many people's first name is "Pamella"? Use =grep= to find
+      that out. 
+
+   4. Read the =man= page for grep. Print out the all the lines from
+      people who *do not* have an address in NJ. Include the command
+      line in your worksheet.
+
+
+----------------------------------------------------------------------------
+Part 4: Pipelines and Counting
+
+   1. Create a pipeline to count the number of unique states
+      represented in the database file. Include the pipeline in your
+      worksheet.
+
+   2. How many first names in the file repeat? How many last names?
+      Include the pipelines used to determine this.
+
+   3. Write a pipeline to first print to the terminal all the unique
+      telephone area codes? Add to your pipeline how to sort those
+      numerical?  (Hint: read the man page for =sort=).
+
+
+----------------------------------------------------------------------------
+Part 5: Permissions and Ownership
+
+   1. Convert the following permission states into an octet:
+
+      a. User: read and write; Group: read; Global: read
+	644
+      b. User: read and execute; Group execute; Global: read
+      	 514
+   2. Make the =runme= program executable and execute it. What is the
+      output?
+
+      You ran ./runme, but your username is m164488
+
+   3. Work with a partner, copy the =runme= program to your /home/
+      directory. Change the name of it to =runme-username= where
+      =username= is replaced by /your/ username (e.g., m16723). 
+
+      a. Set the program to the permission setting such that anyone
+         can execute it. Ask your partner to try and execute it using
+         the following command: =~username/runme-username= where
+         =username= is replaced by your username. What is the output?
+
+	 You ran /home/mids/m164488/runme-m164488, but your username is m161998
+
+      b. Set the program to have the permission where only members of
+         the same group can execute it. Run =ls -l= to verify you've
+         done this properly and include that output in your
+         worksheet. Can you partner run your program now? Why so or
+         why not?
+
+	 m164488@mich302csd04u:~$ ls -l runme-m164488 
+	 -rw---x--- 1 m164488 mids 7888 Jan 10 14:59 runme-m164488
+	 Yes. He is in the same group as me.
+
+      c. Set the program such that only you can execute it, but
+         anyone can read it. Run =ls -l= to verify that you've done
+         this properly and include that output in your worksheet. Can
+         your partner still run the program? But, could your partner
+         /copy/ the program to his/her home directory and then run
+         it? Briefly describe that process in your worksheet.
+
+	 My partner cannot run the program because he dosn't have
+	 execute permissions. My partner could copy it and then run
+	 it. He used cp to get the file into his home file. Then he
+	 ran it with ./filename

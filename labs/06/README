@@ -1,0 +1,24 @@
+----------------------------------------------------------------------------
+Name:  Michael Moore
+Alpha: 164488
+
+----------------------------------------------------------------------------
+
+Fill out the below worksheet answer any relevant questions and adding
+descriptions where neccesary. (Don't forget to write your name and
+alpha at the top)
+
+----------------------------------------------------------------------------
+
+Task 1: foursons
+Foursons went through and found out which way each of the child
+processes exited. it then matched the pid to the index to print out
+the correct order.
+
+Task 2: timer
+timer started a timer when a process was run and stoped it after it
+finished. 
+
+Task 3: mini-sh
+mini-sh times a program and also runs it. It makes it's own argv array
+with the strings that were input.

@@ -1,0 +1,35 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(int argc, char * argv[]){
+
+  int a,b,*p;
+
+  p = &b;
+  *p = 15; /* (1) */
+
+printf("a:%d\n",a);
+  printf("b:%d\n",b);
+  printf("*p:%d\n",*p);
+
+  a = b;
+  b = 25; /* (2) */
+
+ printf("a:%d\n",a);
+  printf("b:%d\n",b);
+  printf("*p:%d\n",*p);
+
+  p = &a; /* (3) */
+
+ printf("a:%d\n",a);
+  printf("b:%d\n",b);
+  printf("*p:%d\n",*p);
+
+  (*p)++; /* (4) */
+
+  printf("a:%d\n",a);
+  printf("b:%d\n",b);
+  printf("*p:%d\n",*p);
+  printf("Size of short: %lu bytes\n", sizeof(short));
+  printf("Size of int: %lu bytes\n", sizeof(int));
+}

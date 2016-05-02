@@ -1,0 +1,37 @@
+----------------------------------------------------------------------------
+Name:  Michael Moore
+Alpha: 164488
+
+----------------------------------------------------------------------------
+
+Fill out the below worksheet answer any relevant questions and adding
+descriptions where neccesary. (Don't forget to write your name and
+alpha at the top)
+
+----------------------------------------------------------------------------
+
+Prob 1: shell
+I copied the file and added execute with chmod +x.
+I added #!/bin/bash to the head of script.sh and then at the end I
+echoed secret. 
+I then executed the script.sh and piped it to base64 with the -d flag
+to decode the message.
+The message is HANG IN THERE and its some kind of werid animal thats
+hanging on to something.
+
+Prob 2: pipes
+In the child I closed c to p's read then p to c's right. it executed
+then i closed both pipes read and write. in the parent I closed p to
+c's read, let it do its work then closed both pipes read and write.
+
+Prob 3: sockets
+I opened my proxy socket and bound that to my proxy information. thats
+as far as I got and it also didn't work right.
+
+Prob 4: threads
+     I set xargs n to 5000 threads and then said I want the
+     transactions to start at what ever incriment of 5000 i am
+     on. then I said to create the thread using execute and giving it
+     the xargs struct as an argument. my exectue then locks the mutex
+     and then changes the balance for what ever that transaction
+     amount is.

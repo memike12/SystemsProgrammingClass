@@ -1,0 +1,23 @@
+----------------------------------------------------------------------------
+Name:  Michael Moore
+Alpha: 164488
+
+----------------------------------------------------------------------------
+
+Fill out the below worksheet answer any relevant questions and adding
+descriptions where neccesary. (Don't forget to write your name and
+alpha at the top)
+
+----------------------------------------------------------------------------
+
+
+Task 1: shredder
+     the method tick incriments tics. then prints the tics then if the
+     tics are more than 5 it gets killed. also it throws an alarm to
+     continue the signal. the main throws an alarm and waits for
+     status then it prints out the different options
+
+
+Task 2: moresons
+     moresons looks for the different signal statuses and then prints
+     out their otpions. 

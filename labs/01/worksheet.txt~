@@ -1,0 +1,149 @@
+----------------------------------------------------------------------------
+Name:  Michael Moore
+Alpha: 164488
+
+Partner: Matthew Finley (part 4)
+----------------------------------------------------------------------------
+Instructions:
+
+  Replace the X's above with your name and alpha, and your partners
+  name for part 4. Below, fill out this worksheet with the appropriate
+  answers following the questions.
+
+  Feel free to add extra whitespace as needed, but please leave the
+  general questions and worksheets intact. 
+
+  
+  This worksheet will be submitted electronically with your
+  submission. Instructions for submission are found on the lab page.
+
+----------------------------------------------------------------------------
+Part 1: The Man Pages
+
+
+   1. For the =ls= command, what option prints information out in long
+      form, like =-l=, but does not print any file ownership
+      information? In the worksheet, provide a copy of the output
+      using =ls= with this option run from the *top level* of the lab
+      directory.
+
+   2. Change into the =part1= directory and type =ls=. You will see a
+      list of files =a b c d e f g=. 
+      
+      a. Note that =ls= lists the files in alphabetic order. What =ls=
+         option will list the files in /reverse/ alphabetic order? Provide
+         a copy of your output of your =ls= with the addition of =-l=
+         in your worksheet.
+
+      b. What =ls= options will sort the files by /size/ from smallest
+         to largest? Provide a copy of your output of your =ls= with
+         the addition of =-l= in your worksheet.
+
+      c. What =ls= option will sort the files in /reverse size/ order
+         from largest to smallest. Provide a copy of your output of
+         your =ls= with the addition of =-l= in your worksheet.
+
+   3. Remove the =g= file using the =rm= command. Notice that the
+      shell asked you to confirm removing the item.  Look at the
+      manual for =rm=, what option must have been invoked when you
+      issued that command? What option can you use to avoid having to
+      confirm the removal of an item?
+
+   4. (*Challenge*) Read the manual page for the =touch= command. One
+      of the uses for =touch= is to update the last modified timestamp
+      of a file (you can view that last modified using =ls -l=). Use
+      the =touch= command to create a file =y2k= whose last
+      modification time was Dec. 31 1999 at 23:59.59. Include the
+      command you used on your worksheet and a copy of your =ls -l=
+      output of the =y2k= file.
+
+----------------------------------------------------------------------------
+Part 2: cat, less, and more
+
+
+   1. Use =cat= to place a "Beat Army!" at the start of Hemmingway's a
+      very short story and "Go Navy!" at the end. Include the command
+      you used on your worksheet.
+
+   2. Why is =less= =more=?
+
+   3. Use =less= to open =dickens.txt=:
+
+      a. Search for the first instance of "Fagin", what is the line of
+         that text?
+
+      b. Find the *second to last* instance of "Fagin". Describe how
+         you did that and the sentence it appears in.
+   
+      c. Go to line 1845, what is the name of that chapter? 
+
+----------------------------------------------------------------------------
+Part 3: Viewing Files Conditionally
+
+
+   1. Read the man pages for =head= and =less=, produce a command line
+      to print the first kilobyte of the database file. Note, a
+      kilobyte is 2^10 or 1024 bytes. Include the command line in your worksheet.
+
+   2. Use =less= or =grep= to find the line number of
+      "Klonowski". Produce a =sed= command to just print the line with
+      "Klonowski" and the following 5 lines. Include the command line
+      in your worksheet.
+
+   3. How many people's first name is "Pamella"? Use =grep= to find
+      that out. 
+
+   4. Read the =man= page for grep. Print out the all the lines from
+      people who *do not* have an address in NJ. Include the command
+      line in your worksheet.
+
+
+----------------------------------------------------------------------------
+Part 4: Pipelines and Counting
+
+   1. Create a pipeline to count the number of unique states
+      represented in the database file. Include the pipeline in your
+      worksheet.
+
+   2. How many first names in the file repeat? How many last names?
+      Include the pipelines used to determine this.
+
+   3. Write a pipeline to first print to the terminal all the unique
+      telephone area codes? Add to your pipeline how to sort those
+      numerical?  (Hint: read the man page for =sort=).
+
+
+----------------------------------------------------------------------------
+Part 5: Permissions and Ownership
+
+   1. Convert the following permission states into an octet:
+
+      a. User: read and write; Group: read; Global: read
+	
+      b. User: read and execute; Group execute; Global: read
+   
+   2. Make the =runme= program executable and execute it. What is the
+      output?
+
+   3. Work with a partner, copy the =runme= program to your /home/
+      directory. Change the name of it to =runme-username= where
+      =username= is replaced by /your/ username (e.g., m16723). 
+
+      a. Set the program to the permission setting such that anyone
+         can execute it. Ask your partner to try and execute it using
+         the following command: =~username/runme-username= where
+         =username= is replaced by your username. What is the output?
+
+      b. Set the program to have the permission where only members of
+         the same group can execute it. Run =ls -l= to verify you've
+         done this properly and include that output in your
+         worksheet. Can you partner run your program now? Why so or
+         why not?
+
+      c. Set the program such that only you can execute it, but
+         anyone can read it. Run =ls -l= to verify that you've done
+         this properly and include that output in your worksheet. Can
+         your partner still run the program? But, could your partner
+         /copy/ the program to his/her home directory and then run
+         it? Briefly describe that process in your worksheet.
+
